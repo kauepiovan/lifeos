@@ -77,3 +77,6 @@ docker-data/
 
 anotation.md
 /src/generated/prisma
+
+
+*.http
