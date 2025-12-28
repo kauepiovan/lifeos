@@ -76,3 +76,4 @@ Thumbs.db
 docker-data/
 
 anotation.md
+/src/generated/prisma
