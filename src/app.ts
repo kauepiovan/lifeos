@@ -1,8 +1,11 @@
 import Fastify from "fastify";
+import usersRoutes from "./modules/users/users.routes";
 
 export const app = Fastify({
   logger: true,
 });
+
+app.register(usersRoutes);
 
 app.get("/health", async () => {
   return { status: "ok" };
