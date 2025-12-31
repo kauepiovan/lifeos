@@ -28,8 +28,16 @@ export default function usersRoutes(fastify: FastifyInstance, options: Object) {
       },
 
       handler: async function(request: FastifyRequest<{ Body: createUserBody }>, reply: FastifyReply) {
-        const { name, email, password } = request.body;
-        return reply.send({msg: "all ok", body: {name, email, password}})
+        try {
+          const { name, email, password } = request.body;
+          // do somthing with body data request
+          reply.status(200)
+          return  reply.send();
+        } catch (err) {
+          reply.status(500)
+          fastify.log.info("something it is wrong")
+          fastify.log.error(err)
+        }
       }
 
 
