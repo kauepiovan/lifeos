@@ -1,5 +1,5 @@
 import Fastify from "fastify";
-import usersRoutes from "./modules/users/users.routes";
+import usersRoutes from "./modules/users/routes/users.routes";
 
 export const app = Fastify({
   logger: true,
